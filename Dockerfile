@@ -26,7 +26,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 
 # install R & set default CRAN repo
 RUN export DEBIAN_FRONTEND=noninteractive \
-  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 \
+  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E19F5F87128899B192B1A2C2AD5F960A256A04AF \
   && DISTRO=$(lsb_release -c | awk '{print $2}') \
   && echo "deb https://cloud.r-project.org/bin/linux/ubuntu $DISTRO-$CRAN_VERSION/" > /etc/apt/sources.list.d/cran.list \
   && apt-get update -q \
